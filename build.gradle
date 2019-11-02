@@ -2,12 +2,12 @@ plugins {
     id 'com.github.blindpirate.gogradle' version '0.11.4'
 }
 golang {
-    packagePath = 'github.com/my/package' // go import path of project to be built, NOT local file system path!
+    packagePath = 'github.com/yaoxi123/gogradle' // go import path of project to be built, NOT local file system path!
 }
 
 goBuild.dependsOn goCheck 
 
 goBuild {
     targetPlatform = ['linux-386', 'windows-amd64', 'darwin-amd64']
-    go 'build -o ./StringReverse_${GOOS}_${GOARCH}${GOEXE} github.com/my/package/main'
+    go 'build -o ./StringReverse_${GOOS}_${GOARCH}${GOEXE} github.com/yaoxi123/gogradle/main'
 }
